@@ -2,15 +2,14 @@
 # -*- coding: utf-8 -*-
 
 set -e
-
 function publish {
     bump
     readme
-    
-    push
+        push
 }
 
 function check {
+
     flake8
 }
 
