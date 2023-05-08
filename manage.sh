@@ -6,6 +6,7 @@ set -e
 function publish {
     bump
     readme
+    
     push
 }
 
@@ -23,6 +24,7 @@ function bump {
     read version
     if [ -z "$version" ]; then
         echo "empty version string"
+        
         exit 1
     fi
     sed -i -b "s/version = .*/version = \"$version\"/" setup.py
